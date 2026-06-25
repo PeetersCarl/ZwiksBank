@@ -227,20 +227,26 @@
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
     font-family: 'DM Mono', monospace;
-    font-size: 20px;
+    font-size: clamp(16px, 4.2vw, 18px);
     color: var(--white);
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     margin-bottom: 20px;
     text-shadow: 0 2px 4px rgba(0,0,0,0.3);
   }
 
   .card-number-display span {
-    margin-right: 12px;
+    display: inline-block;
+    min-width: 4ch;
+    margin-right: 8px;
     opacity: 0.4;
+    white-space: nowrap;
   }
 
   .card-number-display span:last-child {
+    min-width: 1ch;
     margin-right: 0;
   }
 
@@ -827,8 +833,8 @@
     }
 
     .card-number-display {
-      font-size: clamp(18px, 6vw, 24px);
-      gap: 8px;
+      font-size: clamp(14px, 4.8vw, 17px);
+      letter-spacing: 0;
     }
 
     .login-box {
