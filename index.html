@@ -224,10 +224,11 @@
   }
 
   .card-number-display {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 4ch) 1ch;
     align-items: center;
-    flex-wrap: nowrap;
     justify-content: space-between;
+    column-gap: clamp(4px, 2.2vw, 10px);
     width: 100%;
     font-family: 'DM Mono', monospace;
     font-size: clamp(16px, 4.2vw, 18px);
@@ -240,14 +241,12 @@
   .card-number-display span {
     display: inline-block;
     min-width: 4ch;
-    margin-right: 8px;
     opacity: 0.4;
     white-space: nowrap;
   }
 
   .card-number-display span:last-child {
     min-width: 1ch;
-    margin-right: 0;
   }
 
   .card-number-display span.revealed {
@@ -829,11 +828,12 @@
       width: min(100%, 360px);
       aspect-ratio: 1.58;
       height: auto;
-      padding: 24px;
+      padding: 22px;
     }
 
     .card-number-display {
-      font-size: clamp(14px, 4.8vw, 17px);
+      column-gap: 4px;
+      font-size: clamp(12px, 4vw, 15px);
       letter-spacing: 0;
     }
 
